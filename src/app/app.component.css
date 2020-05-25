@@ -4,7 +4,7 @@
     min-width: 1031px;
     max-width: 1031px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 35px 20px;
 }
 
 .managers {
@@ -15,4 +15,8 @@
 .shops {
     flex-shrink: 0;
     width: 48.5%;
+}
+
+.save {
+    text-align: right;
 }

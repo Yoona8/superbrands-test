@@ -1,0 +1,26 @@
+.button-check {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    padding: 11px 49px 12px 23px;
+    color: #828282;
+    background-color: transparent;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    transition: 0.2s ease-in-out;
+}
+
+.button-check:hover,
+.button-check:focus {
+    color: #333333;
+    border-color: #dadada;
+}
+
+svg {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: -10px;
+}

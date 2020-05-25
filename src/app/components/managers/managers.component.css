@@ -1,8 +1,6 @@
 .managers {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 35px * 2);
-    padding: 35px 0;
 }
 
 nav {
@@ -82,6 +80,7 @@ nav {
 
 .board {
     flex-grow: 1;
+    min-height: 440px;
     padding: 24px;
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.03);
