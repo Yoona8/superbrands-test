@@ -1,0 +1,18 @@
+.main {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1031px;
+    max-width: 1031px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.managers {
+    flex-shrink: 0;
+    width: 48.5%;
+}
+
+.shops {
+    flex-shrink: 0;
+    width: 48.5%;
+}

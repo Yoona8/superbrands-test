@@ -1,0 +1,26 @@
+.button-add {
+    position: relative;
+    display: block;
+    min-height: 40px;
+    padding: 0 0 0 40px;
+    background: none;
+    border: 0;
+}
+
+.icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+.label {
+    margin-right: 16px;
+}

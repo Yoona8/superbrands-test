@@ -1,0 +1,120 @@
+.managers {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 35px * 2);
+    padding: 35px 0;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.tabs {
+    display: flex;
+    margin: 0 10px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tabs li {
+    position: relative;
+    padding: 10px;
+}
+
+.tabs .active {
+    background: #ffffff;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.03);
+}
+
+.tabs .active::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 1px;
+    right: 1px;
+    height: 5px;
+    background-color: #ffffff;
+}
+
+.tabs .badge {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 16px;
+    height: 16px;
+    font-weight: 700;
+    font-size: 11px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #007aff;
+    border-radius: 50%;
+}
+
+.tabs button {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    border: 0;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tabs img {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.add {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+.board {
+    flex-grow: 1;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.board--empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px dashed rgba(0, 0, 0, 0.1);
+    box-shadow: none;
+}
+
+.board h3 {
+    margin: 0 0 4px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.board--empty h3 {
+    margin: 0 0 18px;
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.board--empty p {
+    width: 370px;
+    margin: 0 0 29px;
+    color: rgba(0, 0, 0, 0.44);
+}

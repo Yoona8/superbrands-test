@@ -1,0 +1,35 @@
+<section class="managers">
+    <h2 class="visually-hidden">Специалисты</h2>
+    <nav>
+        <ul class="tabs">
+            <li class="active">
+                <span class="badge">1</span>
+                <button type="button" aria-label="Самойлов Алексей">
+                    <img width="40" height="40" src="assets/users/alexey.png" alt="Самойлов Алексей">
+                </button>
+            </li>
+            <li>
+                <button type="button" aria-label="Самойлов Алексей">
+                    <img width="40" height="40" src="assets/users/alexey.png" alt="Самойлов Алексей">
+                </button>
+            </li>
+        </ul>
+        <app-button-add></app-button-add>
+    </nav>
+    <div class="board board--empty" *ngIf="false">
+        <h3>Специалист не назначен</h3>
+        <p>
+            Чтобы начать работу с нераспределенными магазинами,
+            вам необходимо добавить хотя бы одного специалиста
+        </p>
+        <button class="add" type="button" aria-label="Добавить специалиста">
+            <svg width="60" height="48" fill="none">
+                <use xlink:href="#i-user-plus"></use>
+            </svg>
+        </button>
+    </div>
+    <div class="board">
+        <h3>Специалист</h3>
+        <h3>Магазины</h3>
+    </div>
+</section>

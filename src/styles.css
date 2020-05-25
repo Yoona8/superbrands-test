@@ -1,1 +1,62 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto'), local('Roboto-Regular'),
+        url('assets/fonts/roboto-400.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto Medium'), local('Roboto-Medium'),
+        url('assets/fonts/roboto-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:
+        local('Roboto Bold'), local('Roboto-Bold'),
+        url('assets/fonts/roboto-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 1031px;
+    font-size: 13px;
+    line-height: 1.7;
+    font-family: 'Roboto', 'Arial', sans-serif;
+    color: rgba(0, 0, 0, 0.72);
+    background-color: #fafafa;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
