@@ -81,7 +81,7 @@ nav {
 .board {
     flex-grow: 1;
     min-height: 440px;
-    padding: 24px;
+    padding: 22px 24px;
     background-color: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.03);
     border-radius: 4px;
@@ -102,6 +102,7 @@ nav {
 .board h3 {
     margin: 0 0 4px;
     font-weight: 400;
+    font-size: 13px;
     color: rgba(0, 0, 0, 0.32);
 }
 

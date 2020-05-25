@@ -13,10 +13,16 @@
 }
 
 .shops {
+    display: flex;
+    flex-direction: column;
     flex-shrink: 0;
     width: 48.5%;
 }
 
 .save {
     text-align: right;
+}
+
+.shop-list {
+    margin-top: auto;
 }
