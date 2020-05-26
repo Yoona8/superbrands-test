@@ -6,6 +6,8 @@ import { ManagersComponent } from './components/managers/managers.component';
 import { ButtonAddComponent } from './components/shared/button-add/button-add.component';
 import { ButtonCheckComponent } from './components/shared/button-check/button-check.component';
 import { ShopsComponent } from './components/shops/shops.component';
+import { ManagerComponent } from './components/shared/manager/manager.component';
+import { ButtonDeleteComponent } from './components/shared/button-delete/button-delete.component';
 
 @NgModule({
     declarations: [
@@ -13,7 +15,9 @@ import { ShopsComponent } from './components/shops/shops.component';
         ManagersComponent,
         ButtonAddComponent,
         ButtonCheckComponent,
-        ShopsComponent
+        ButtonDeleteComponent,
+        ShopsComponent,
+        ManagerComponent
     ],
     imports: [
         BrowserModule
