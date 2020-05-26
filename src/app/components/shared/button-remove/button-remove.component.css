@@ -1,0 +1,20 @@
+.button-remove {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 0;
+    border-radius: 50%;
+}
+
+.button-remove::after {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 2px;
+    background-color: #adadad;
+}

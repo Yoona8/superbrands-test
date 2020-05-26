@@ -1,0 +1,42 @@
+.shop {
+    display: flex;
+    align-items: center;
+    padding: 13px 0;
+}
+
+.add {
+    margin-right: 19px;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: capitalize;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.72);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+address {
+    margin: 0;
+    font-style: normal;
+    font-size: 11px;
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.remove {
+    margin-left: auto;
+}

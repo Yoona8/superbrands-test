@@ -34,15 +34,15 @@
             <app-manager></app-manager>
         </div>
         <h3>Магазины</h3>
-        <p class="no-shops">
+        <p class="no-shops" *ngIf="false">
             Не назначены
             <span class="alert-icon">
                 <app-alert></app-alert>
             </span>
         </p>
-        <ul class="shops" *ngIf="false">
+        <ul class="shops" *ngIf="true">
             <li>
-                <!--<app-shop></app-shop>-->
+                <app-shop></app-shop>
             </li>
         </ul>
     </div>

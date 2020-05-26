@@ -29,3 +29,9 @@
 .alert-icon {
     margin-left: 12px;
 }
+
+.shop-list {
+    margin: 0;
+    padding: 0 0 0 38px;
+    list-style: none;
+}
