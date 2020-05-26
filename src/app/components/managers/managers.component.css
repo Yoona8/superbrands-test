@@ -122,3 +122,12 @@ nav {
 .manager {
     margin-bottom: 24px;
 }
+
+.no-shops {
+    margin: 0;
+    padding: 14px 0;
+}
+
+.alert-icon {
+    margin-left: 12px;
+}

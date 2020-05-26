@@ -8,6 +8,7 @@ import { ButtonCheckComponent } from './components/shared/button-check/button-ch
 import { ShopsComponent } from './components/shops/shops.component';
 import { ManagerComponent } from './components/shared/manager/manager.component';
 import { ButtonDeleteComponent } from './components/shared/button-delete/button-delete.component';
+import { AlertComponent } from './components/shared/alert/alert.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ButtonDeleteComponent } from './components/shared/button-delete/button-
         ButtonCheckComponent,
         ButtonDeleteComponent,
         ShopsComponent,
-        ManagerComponent
+        ManagerComponent,
+        AlertComponent
     ],
     imports: [
         BrowserModule
