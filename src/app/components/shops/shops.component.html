@@ -1,21 +1,18 @@
 <section class="shops">
     <h2 class="visually-hidden">Список нераспределенных магазинов</h2>
-    <div class="board board--empty" *ngIf="false">
+    <div class="board board--empty" *ngIf="unassignedShops.length === 0">
         <p>Нераспределенных магазинов нет</p>
     </div>
-    <div class="board">
+    <div class="board" *ngIf="unassignedShops.length > 0">
         <p>
-            Нераспределенные магазины: 4
+            Нераспределенные магазины: {{ unassignedShops.length }}
             <span class="alert-icon">
                 <app-alert></app-alert>
             </span>
         </p>
         <ul class="shop-list">
-            <li>
-                <app-shop></app-shop>
-            </li>
-            <li>
-                <app-shop></app-shop>
+            <li *ngFor="let shop of unassignedShops">
+                <app-shop [shop]="shop"></app-shop>
             </li>
         </ul>
     </div>

@@ -1,20 +1,20 @@
 <section class="shop">
-    <div class="add" *ngIf="false">
+    <div class="add" *ngIf="!assigned">
         <app-button-move></app-button-move>
     </div>
     <span class="image">
         <span>BS</span>
-        <img src="#" alt="Brandshop на Дмитровской 7" *ngIf="false">
+        <img src="#" [alt]="shop.name" *ngIf="false">
     </span>
     <div class="main-info">
         <h4 class="title">
-            Brandshop на Дмитровской 7
+            {{ shop.name }}
         </h4>
         <address>
-            г. Москва, ул. Курская, д. 392б, стр. 3, офис 239
+            {{ shop.address }}
         </address>
     </div>
-    <div class="remove" *ngIf="true">
+    <div class="remove" *ngIf="assigned">
         <app-button-remove></app-button-remove>
     </div>
 </section>
