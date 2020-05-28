@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="manager">
+    <h3>Специалист</h3>
+    <section class="manager-info">
+        <img width="32" height="32" src="assets/users/alexey.png" alt="Самойлов Алексей">
+        <h4 class="name">Самойлов Алексей</h4>
+        <span class="shops-count">0 магазинов</span>
+        <div class="delete">
+            <app-button-delete></app-button-delete>
+        </div>
+    </section>
+    <h3>Магазины</h3>
+    <p class="no-shops" *ngIf="true">
+        Не назначены
+        <span class="alert-icon">
+            <app-alert></app-alert>
+        </span>
+    </p>
+    <ul class="shops" *ngIf="false">
+        <li>
+            <app-shop></app-shop>
+        </li>
+    </ul>
+</div>

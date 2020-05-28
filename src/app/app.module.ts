@@ -6,12 +6,13 @@ import { ManagersComponent } from './components/managers/managers.component';
 import { ButtonAddComponent } from './components/shared/button-add/button-add.component';
 import { ButtonCheckComponent } from './components/shared/button-check/button-check.component';
 import { ShopsComponent } from './components/shops/shops.component';
-import { ManagerComponent } from './components/shared/manager/manager.component';
 import { ButtonDeleteComponent } from './components/shared/button-delete/button-delete.component';
 import { AlertComponent } from './components/shared/alert/alert.component';
 import { ShopComponent } from './components/shared/shop/shop.component';
 import { ButtonMoveComponent } from './components/shared/button-move/button-move.component';
 import { ButtonRemoveComponent } from './components/shared/button-remove/button-remove.component';
+import { NoManagersComponent } from './components/no-managers/no-managers.component';
+import { ManagerComponent } from './components/manager/manager.component';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { ButtonRemoveComponent } from './components/shared/button-remove/button-
         ShopsComponent,
         ManagerComponent,
         AlertComponent,
-        ShopComponent
+        ShopComponent,
+        NoManagersComponent
     ],
     imports: [
         BrowserModule

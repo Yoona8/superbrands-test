@@ -1,0 +1,60 @@
+.manager {
+    min-height: 440px;
+    padding: 22px 24px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.manager h3 {
+    margin: 0 0 4px;
+    font-weight: 400;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.32);
+}
+
+.manager-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 6px 0;
+    font-size: 14px;
+}
+
+img {
+    display: block;
+    width: 32px;
+    height: 32px;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+.name {
+    margin: 0 16px 0 0;
+    font-weight: 400;
+    font-size: inherit;
+}
+
+.shops-count {
+    color: #007aff;
+}
+
+.delete {
+    margin-left: auto;
+}
+
+.no-shops {
+    margin: 0;
+    padding: 14px 0;
+}
+
+.alert-icon {
+    margin-left: 12px;
+}
+
+.shops {
+    margin: 0;
+    padding: 0 0 0 36px;
+    list-style: none;
+}

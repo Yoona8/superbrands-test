@@ -16,34 +16,6 @@
         </ul>
         <app-button-add></app-button-add>
     </nav>
-    <div class="board board--empty" *ngIf="false">
-        <h3>Специалист не назначен</h3>
-        <p>
-            Чтобы начать работу с нераспределенными магазинами,
-            вам необходимо добавить хотя бы одного специалиста
-        </p>
-        <button class="add" type="button" aria-label="Добавить специалиста">
-            <svg width="60" height="48" fill="none">
-                <use xlink:href="#i-user-plus"></use>
-            </svg>
-        </button>
-    </div>
-    <div class="board">
-        <h3>Специалист</h3>
-        <div class="manager">
-            <app-manager></app-manager>
-        </div>
-        <h3>Магазины</h3>
-        <p class="no-shops" *ngIf="true">
-            Не назначены
-            <span class="alert-icon">
-                <app-alert></app-alert>
-            </span>
-        </p>
-        <ul class="shops" *ngIf="false">
-            <li>
-                <app-shop></app-shop>
-            </li>
-        </ul>
-    </div>
+    <app-no-managers *ngIf="false"></app-no-managers>
+    <app-manager *ngIf="true"></app-manager>
 </section>
