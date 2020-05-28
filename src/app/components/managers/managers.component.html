@@ -2,20 +2,26 @@
     <h2 class="visually-hidden">Специалисты</h2>
     <nav>
         <ul class="tabs">
-            <li class="active">
-                <span class="badge">1</span>
-                <button type="button" aria-label="Самойлов Алексей">
-                    <img width="40" height="40" src="assets/users/alexey.png" alt="Самойлов Алексей">
-                </button>
-            </li>
-            <li>
-                <button type="button" aria-label="Самойлов Алексей">
-                    <img width="40" height="40" src="assets/users/alexey.png" alt="Самойлов Алексей">
+            <li class="active" *ngFor="let manager of activeManagers">
+                <span class="badge" *ngIf="manager.shops">
+                    {{ manager.shops.length }}
+                </span>
+                <button type="button" [attr.aria-label]="manager.fullName">
+                    <img
+                        width="40" height="40"
+                        [src]="'assets/users/' + manager.logo"
+                        [alt]="manager.fullName">
                 </button>
             </li>
         </ul>
-        <app-button-add></app-button-add>
+        <div class="add-button">
+            <app-button-add
+                (addButtonClicked)="onAddManager()"
+                [label]="'Добавить специалиста'"
+                [isLabelShowing]="activeManagers.length === 0"
+            ></app-button-add>
+        </div>
     </nav>
-    <app-no-managers *ngIf="false"></app-no-managers>
-    <app-manager *ngIf="true"></app-manager>
+    <app-no-managers *ngIf="activeManagers.length === 0"></app-no-managers>
+    <app-manager *ngIf="activeManagers.length > 0"></app-manager>
 </section>

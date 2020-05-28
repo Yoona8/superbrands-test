@@ -21,6 +21,6 @@
     border-radius: 50%;
 }
 
-.label {
-    margin-right: 16px;
+.label:not(.visually-hidden) {
+    margin-left: 16px;
 }
