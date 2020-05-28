@@ -1,0 +1,17 @@
+<div class="no-managers">
+    <h3>Специалист не назначен</h3>
+    <p>
+        Чтобы начать работу с нераспределенными магазинами,
+        вам необходимо добавить хотя бы одного специалиста
+    </p>
+    <button
+        class="add"
+        type="button"
+        aria-label="Добавить специалиста"
+        (click)="onAddClick()"
+    >
+        <svg width="60" height="48" fill="none">
+            <use xlink:href="#i-user-plus"></use>
+        </svg>
+    </button>
+</div>
