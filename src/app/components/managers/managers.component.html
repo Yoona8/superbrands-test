@@ -2,16 +2,16 @@
     <h2 class="visually-hidden">Специалисты</h2>
     <nav>
         <ul class="tabs">
-            <li class="active" *ngFor="let manager of activeManagers">
+            <li [routerLinkActive]="'active'" *ngFor="let manager of activeManagers">
                 <span class="badge" *ngIf="manager.shops">
                     {{ manager.shops.length }}
                 </span>
-                <button type="button" [attr.aria-label]="manager.fullName">
+                <a [routerLink]="manager.id" [attr.aria-label]="manager.fullName">
                     <img
                         width="40" height="40"
                         [src]="'assets/users/' + manager.logo"
                         [alt]="manager.fullName">
-                </button>
+                </a>
             </li>
         </ul>
         <div class="add-button">
@@ -22,6 +22,7 @@
             ></app-button-add>
         </div>
     </nav>
-    <app-no-managers *ngIf="activeManagers.length === 0"></app-no-managers>
-    <app-manager *ngIf="activeManagers.length > 0"></app-manager>
+    <router-outlet></router-outlet>
+    <!--<app-no-managers *ngIf="activeManagers.length === 0"></app-no-managers>-->
+    <!--<app-manager *ngIf="activeManagers.length > 0"></app-manager>-->
 </section>

@@ -13,6 +13,7 @@ import { ButtonMoveComponent } from './components/shared/button-move/button-move
 import { ButtonRemoveComponent } from './components/shared/button-remove/button-remove.component';
 import { NoManagersComponent } from './components/no-managers/no-managers.component';
 import { ManagerComponent } from './components/manager/manager.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { ManagerComponent } from './components/manager/manager.component';
         NoManagersComponent
     ],
     imports: [
-        BrowserModule
+        BrowserModule,
+        AppRoutingModule
     ],
     providers: [],
     bootstrap: [AppComponent]
