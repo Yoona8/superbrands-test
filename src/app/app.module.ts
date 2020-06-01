@@ -14,6 +14,7 @@ import { ButtonRemoveComponent } from './components/shared/button-remove/button-
 import { NoManagersComponent } from './components/no-managers/no-managers.component';
 import { ManagerComponent } from './components/manager/manager.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ShortenNamePipe } from './pipes/shorten-name.pipe';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
         ManagerComponent,
         AlertComponent,
         ShopComponent,
-        NoManagersComponent
+        NoManagersComponent,
+        ShortenNamePipe
     ],
     imports: [
         BrowserModule,

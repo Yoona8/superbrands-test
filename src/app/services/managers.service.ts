@@ -10,4 +10,8 @@ export class ManagersService {
     getManagers() {
         return this.managers.slice();
     }
+
+    getManager(id: string) {
+        return this.managers.find((manager) => manager.id === id);
+    }
 }
