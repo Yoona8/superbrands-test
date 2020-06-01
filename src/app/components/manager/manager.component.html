@@ -19,8 +19,8 @@
         </span>
     </p>
     <ul class="shops" *ngIf="manager.shops && manager.shops.length > 0">
-        <li>
-            <app-shop></app-shop>
+        <li *ngFor="let shop of manager.shops">
+            <app-shop [shop]="shop" [assigned]="true"></app-shop>
         </li>
     </ul>
 </div>

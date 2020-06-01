@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Shop } from '../../../models/shop.model';
+import { ManagersService } from '../../../services/managers.service';
+import { Manager } from '../../../models/manager.model';
 
 @Component({
     selector: 'app-shop',
@@ -9,4 +11,10 @@ import { Shop } from '../../../models/shop.model';
 export class ShopComponent {
     @Input() assigned: boolean = false;
     @Input() shop: Shop;
+
+    constructor(private managersService: ManagersService) {}
+
+    onAddShop() {
+        this.managersService.addShop(this.shop);
+    }
 }

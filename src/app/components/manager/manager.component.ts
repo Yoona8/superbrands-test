@@ -18,10 +18,9 @@ export class ManagerComponent implements OnInit {
 
     ngOnInit(): void {
         this.route.params.subscribe((params: Params) => {
-            this._manager = this.managersService.getManager(params['id']);
+            this.managersService.setManager(params['id']);
+            this._manager = this.managersService.getManager();
         });
-
-        console.log(this._manager);
     }
 
     get manager() {

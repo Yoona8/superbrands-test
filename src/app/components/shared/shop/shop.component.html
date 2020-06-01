@@ -1,6 +1,6 @@
 <section class="shop">
     <div class="add" *ngIf="!assigned">
-        <app-button-move></app-button-move>
+        <app-button-move (moveButtonClicked)="onAddShop()"></app-button-move>
     </div>
     <span class="image">
         <span>BS</span>

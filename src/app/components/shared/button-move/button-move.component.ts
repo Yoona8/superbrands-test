@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
     selector: 'app-button-move',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./button-move.component.css']
 })
 export class ButtonMoveComponent {
+    @Output() moveButtonClicked = new EventEmitter<any>();
 
+    onMoveClick() {
+        this.moveButtonClicked.emit();
+    }
 }
