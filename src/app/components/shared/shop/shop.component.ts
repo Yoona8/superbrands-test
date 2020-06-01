@@ -17,4 +17,8 @@ export class ShopComponent {
     onAddShop() {
         this.managersService.addShop(this.shop);
     }
+
+    onRemoveShop() {
+        this.managersService.removeShop(this.shop);
+    }
 }

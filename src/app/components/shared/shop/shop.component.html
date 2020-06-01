@@ -15,6 +15,6 @@
         </address>
     </div>
     <div class="remove" *ngIf="assigned">
-        <app-button-remove></app-button-remove>
+        <app-button-remove (removeButtonClicked)="onRemoveShop()"></app-button-remove>
     </div>
 </section>

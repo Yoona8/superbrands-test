@@ -8,11 +8,11 @@
         <h4 class="name">{{ manager.fullName | shortenName }}</h4>
         <span class="shops-count">{{ manager.shops ? manager.shops.length : 0 }} магазинов</span>
         <div class="delete">
-            <app-button-delete></app-button-delete>
+            <app-button-delete (deleteButtonClicked)="onRemoveManager()"></app-button-delete>
         </div>
     </section>
     <h3>Магазины</h3>
-    <p class="no-shops" *ngIf="!manager.shops">
+    <p class="no-shops" *ngIf="!manager.shops || manager.shops.length === 0">
         Не назначены
         <span class="alert-icon">
             <app-alert></app-alert>

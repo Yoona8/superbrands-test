@@ -5,7 +5,8 @@ import { ManagerComponent } from './components/manager/manager.component';
 
 const appRoutes: Routes = [
     { path: '', component: NoManagersComponent },
-    { path: ':id', component: ManagerComponent }
+    { path: ':id', component: ManagerComponent },
+    { path: '**', component: NoManagersComponent }
 ];
 
 @NgModule({

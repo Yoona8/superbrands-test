@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Manager } from '../../models/manager.model';
 import { ManagersService } from '../../services/managers.service';
@@ -25,5 +25,9 @@ export class ManagerComponent implements OnInit {
 
     get manager() {
         return this._manager;
+    }
+
+    onRemoveManager() {
+        this.managersService.removeManager(this._manager);
     }
 }

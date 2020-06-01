@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ManagersService } from '../../services/managers.service';
 import { Manager } from '../../models/manager.model';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
     selector: 'app-managers',
     templateUrl: './managers.component.html',
     styleUrls: ['./managers.component.css']
 })
-export class ManagersComponent implements OnInit {
-    private _managers: Array<Manager>;
+export class ManagersComponent implements OnInit, OnDestroy {
     private _activeManagers: Array<Manager> = [];
+    private _currentManager: Manager;
+    private _managersChanged: Subscription;
 
     constructor(
         private managersService: ManagersService,
@@ -18,7 +20,25 @@ export class ManagersComponent implements OnInit {
     ) {}
 
     ngOnInit(): void {
-        this._managers = this.managersService.getManagers().slice();
+        this._activeManagers = this.managersService.getManagers();
+
+        this._managersChanged = this.managersService.managersChanged.subscribe((managers) => {
+            this._activeManagers = managers;
+
+            if (this._activeManagers.length === 0) {
+                this.router.navigate([''], {skipLocationChange: true});
+            }
+
+            this._currentManager = this.managersService.getManager();
+
+            if (this._currentManager) {
+                this.router.navigate([this.managersService.getManager().id], {skipLocationChange: true});
+            }
+        });
+    }
+
+    ngOnDestroy(): void {
+        this._managersChanged.unsubscribe();
     }
 
     get activeManagers() {
@@ -26,12 +46,10 @@ export class ManagersComponent implements OnInit {
     }
 
     onAddManager() {
-        if (this._managers.length === 0) {
-            return;
-        }
+        this._currentManager = this.managersService.addManager();
 
-        const addedManager = this._managers.shift();
-        this._activeManagers.push(addedManager);
-        this.router.navigate([addedManager.id], { skipLocationChange: true });
+        if (this._currentManager) {
+            this.router.navigate([this._currentManager.id], {skipLocationChange: true});
+        }
     }
 }
