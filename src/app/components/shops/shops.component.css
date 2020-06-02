@@ -35,3 +35,8 @@
     padding: 0 0 0 38px;
     list-style: none;
 }
+
+.inactive .shop-list {
+    opacity: 0.6;
+    pointer-events: none;
+}

@@ -1,4 +1,7 @@
-<section class="shops">
+<section
+    class="shops"
+    [ngClass]="isActive ? '' : 'inactive'"
+>
     <h2 class="visually-hidden">Список нераспределенных магазинов</h2>
     <div class="board board--empty" *ngIf="unassignedShops.length === 0">
         <p>Нераспределенных магазинов нет</p>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-button-check',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
     styleUrls: ['./button-check.component.css']
 })
 export class ButtonCheckComponent {
+    @Output() checkButtonClicked = new EventEmitter<any>();
 
+    onCheckClick() {
+        this.checkButtonClicked.emit();
+    }
 }

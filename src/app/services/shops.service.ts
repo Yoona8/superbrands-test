@@ -5,9 +5,26 @@ import * as shopsData from '../../mocks/shops.json';
 
 @Injectable({providedIn: 'root'})
 export class ShopsService {
-    private shops: Array<Shop> = shopsData.default;
+    private _shops: Array<Shop> = shopsData.default;
 
     getShops() {
-        return this.shops.slice();
+        return this._shops.slice();
+    }
+
+    getManagerIdsWithShopIds() {
+        const managerIdsWithShopIds = [];
+
+        this._shops.forEach((shop) => {
+            if (shop.managerId) {
+                const managerIdShopId = {
+                    managerId: shop.managerId,
+                    shopId: shop.id
+                };
+
+                managerIdsWithShopIds.push(managerIdShopId);
+            }
+        });
+
+        return managerIdsWithShopIds;
     }
 }
