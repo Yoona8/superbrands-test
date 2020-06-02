@@ -1,16 +1,12 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ButtonAbstractComponent } from '../button-abstract/button-abstract.component';
 
 @Component({
     selector: 'app-button-add',
     templateUrl: './button-add.component.html',
     styleUrls: ['./button-add.component.css']
 })
-export class ButtonAddComponent {
+export class ButtonAddComponent extends ButtonAbstractComponent {
     @Input() label: string;
     @Input() isLabelShowing: boolean = false;
-    @Output() addButtonClicked = new EventEmitter<any>();
-
-    onAddClick() {
-        this.addButtonClicked.emit();
-    }
 }

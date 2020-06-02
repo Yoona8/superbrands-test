@@ -3,7 +3,9 @@
     <nav>
         <ul class="tabs">
             <li [routerLinkActive]="'active'" *ngFor="let manager of activeManagers">
-                <span class="badge" *ngIf="manager.shops">
+                <span class="badge"
+                      *ngIf="manager.shops && manager.shops.length > 0"
+                >
                     {{ manager.shops.length }}
                 </span>
                 <a [routerLink]="manager.id" [attr.aria-label]="manager.fullName">
@@ -16,7 +18,7 @@
         </ul>
         <div class="add-button">
             <app-button-add
-                (addButtonClicked)="onAddManager()"
+                (buttonClicked)="onAddManager()"
                 [label]="'Добавить специалиста'"
                 [isLabelShowing]="activeManagers.length === 0"
             ></app-button-add>

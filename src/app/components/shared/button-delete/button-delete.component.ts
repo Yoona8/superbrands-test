@@ -1,14 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { ButtonAbstractComponent } from '../button-abstract/button-abstract.component';
 
 @Component({
     selector: 'app-button-delete',
     templateUrl: './button-delete.component.html',
     styleUrls: ['./button-delete.component.css']
 })
-export class ButtonDeleteComponent {
-    @Output() deleteButtonClicked = new EventEmitter<any>();
-
-    onDeleteClick() {
-        this.deleteButtonClicked.emit();
-    }
-}
+export class ButtonDeleteComponent extends ButtonAbstractComponent {}
